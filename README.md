@@ -39,3 +39,37 @@ end
 You can also lint Javascript, CSS, and ERB — feel free to research this. These
 will help you to train yourself to produce cleaner code — and will often alert
 you to mistakes or mishaps!
+
+
+## MVP
+
+```
+as a user
+so I can share my experiences 
+I would like to be able to upload a picture
+```
+```
+as a user
+so I can see others experiences
+I would like to have a feed
+```
+```
+as a user
+so that other know that it's my experience
+I would to see my name on my experience
+```
+```
+as a user
+so that I can describe my experience
+I would to be able to provide a description to my experience
+```
+```
+as a user
+so that only I can use my name 
+I would like to create my personal accounts
+```
+```
+as a user
+so that I know when an experience was uploaded
+I would like to see a time since upload
+```
