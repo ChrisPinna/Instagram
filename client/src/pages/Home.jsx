@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Create } from '../components/Create'
+import { Feed } from '../components/Feed'
 
 const Container = styled.div`
  
@@ -13,6 +14,7 @@ export const Home = () => {
     <Container>
       <Wrapper>
         <Create/>
+        <Feed/>
       </Wrapper>
     </Container>
   )

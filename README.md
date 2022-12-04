@@ -46,7 +46,7 @@ you to mistakes or mishaps!
 ```
 as a user
 so I can share my experiences 
-I would like to be able to upload a picture
+I would like to be able to share a picture as an experience 
 ```
 ```
 as a user
