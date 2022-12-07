@@ -21,3 +21,12 @@ export const getAllPost = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+export const getPost = async (req, res) => {
+  const {id} = req.params;
+  try {
+    const post = await db.query("SELECT * FROM posts WHERE id = $1", [id]);
+    res.status(200).json({message: "Success", data: post.rows[0]})
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}
