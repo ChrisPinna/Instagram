@@ -7,7 +7,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Post = styled.img``;
+const Post = styled.div`
+`
+const PostImg = styled.img``;
+const PostUsername = styled.div``
 
 const baseURL = "http://localhost:8000/api/post";
 
@@ -21,7 +24,12 @@ export const Feed = () => {
   }, []);
 
   const createPosts = (posts) => {
-    return posts.map((post) => <Post src={post.link} />);
+    return posts.map((post) => 
+      <Post>
+        <PostImg src={post.link} />
+        <PostUsername>Posted by {post.user_name ? post.user_name : "Undefined"}</PostUsername>
+      </Post>
+    );
   };
 
   return (

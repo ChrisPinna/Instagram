@@ -1,7 +1,11 @@
 import React from 'react'
+import styled from 'styled-components';
 
-export const Post = () => {
+const PostImg = styled.img``;
+const PostUsername = styled.div``
+export const Post = (prop) => {
   return (
-    <div>b</div>
+    <PostImg src={post.link} />
+    <PostUsername></PostUsername>
   )
 }
