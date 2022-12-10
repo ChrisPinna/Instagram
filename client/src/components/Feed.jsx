@@ -11,6 +11,7 @@ const Post = styled.div`
 `
 const PostImg = styled.img``;
 const PostUsername = styled.div``
+const PostDescription = styled.div``
 
 const baseURL = "http://localhost:8000/api/post";
 
@@ -28,6 +29,8 @@ export const Feed = () => {
       <Post>
         <PostImg src={post.link} />
         <PostUsername>Posted by {post.user_name ? post.user_name : "Undefined"}</PostUsername>
+        <PostDescription>Desctiption: {post.description ? post.description : "Undefined"}</PostDescription>
+
       </Post>
     );
   };
