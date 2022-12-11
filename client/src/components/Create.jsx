@@ -16,8 +16,7 @@ const CreateForm = styled.form`
   height: 20rem;
   width: 30rem;
 `;
-const LinkInput = styled.input`
-  width: 20 rem;
+const Input = styled.input`
 `;
 const CreateButton = styled.button`
   background-color: #f4094f;
@@ -26,11 +25,11 @@ const ImgPreview = styled.img`
   width: 50rem;
   height: auto;
 `;
-const UsernameInput = styled.input``;
 
 export const Create = () => {
   const [link, setLink] = useState("");
   const [username, setUsername] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,6 +38,7 @@ export const Create = () => {
       .post("http://localhost:8000/api/post", {
         username: username,
         link: link,
+        description: description
       })
       .then((res) => {
         console.log(res.data.message);
@@ -51,16 +51,20 @@ export const Create = () => {
         <h1>Create a Post!</h1>
         <ImgPreview src={link} />
         <CreateForm onSubmit={handleSubmit}>
-          <UsernameInput
+          <Input
             type="text"
             onChange={(e) => setUsername(e.target.value)}
-            placeholder="Add you name!"
-          ></UsernameInput>
-          <LinkInput
+            placeholder="Add your name!"
+          ></Input>
+          <Input
             type="text"
             onChange={(e) => setLink(e.target.value)}
-            placeholder="Add you link!"
-          ></LinkInput>
+            placeholder="Add your link!"
+          ></Input>
+          <Input
+          type="text"
+          onChange={(e)=> setDescription(e.target.value)} 
+          placeholder="Add your description!" ></Input>
           <CreateButton type="submit">Create</CreateButton>
         </CreateForm>
       </Wrapper>
